@@ -1,0 +1,25 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Khanh Dao
+	email = khanhdao.knd@gmail.com
+[core]
+	excludesfile = /Users/knd/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/knd/.stCommitMsg
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  fu = fetch upstream --recurse-submodules --prune
+  pu = push upstream -u upstream "$(git rev-parse --abbrev-ref HEAD)"
+
