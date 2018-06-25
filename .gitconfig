@@ -22,4 +22,5 @@
   last = log -1 HEAD
   fu = fetch upstream --recurse-submodules --prune
   pu = push upstream -u upstream "$(git rev-parse --abbrev-ref HEAD)"
+  pom = push origin master
 
