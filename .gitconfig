@@ -1,6 +1,5 @@
 # This is Git's per-user configuration file.
-[user]
-# Please adapt and uncomment the following lines:
+[user] # Please adapt and uncomment the following lines:
 	name = Khanh Dao
 	email = khanhdao.knd@gmail.com
 [core]
@@ -22,6 +21,6 @@
   last = log -1 HEAD
   fu = fetch upstream --recurse-submodules --prune
   fo = fetch origin --recurse-submodules --prune
-  pu = push upstream -u upstream "$(git rev-parse --abbrev-ref HEAD)"
+  pu = !git push -u upstream $(git rev-parse --abbrev-ref HEAD)
   pom = push origin master
 
