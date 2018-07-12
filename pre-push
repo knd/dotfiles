@@ -13,7 +13,7 @@ COMPARE_BRANCH=$(git rev-parse --abbrev-ref HEAD);
 ## Replace this value
 MISSING_FILE_PATH="dependencies.txt"
 
-if [ -z "$(git diff --name-only ${BASE_BRANCH} ${COMPARE_BRANCH} | grep \'${MISSING_FILE_PATH}\')" ]; then
+if [ -z "$(git diff --name-only ${BASE_BRANCH} ${COMPARE_BRANCH} | grep ${MISSING_FILE_PATH})" ]; then
   echo "${YELLOW}**********************************${NC}" 1>&2;
   echo "${YELLOW}WARNING: Not found in this push:${NC}" 1>&2;
   echo;
